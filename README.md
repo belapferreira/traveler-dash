@@ -52,7 +52,7 @@ git clone https://github.com/belapferreira/traveler-dash
 yarn install
 
 # iniciando a aplicação
-yarn start
+yarn dev
 ```
 
 ### :wrench: Tecnologias | Ferramentas | Recursos
