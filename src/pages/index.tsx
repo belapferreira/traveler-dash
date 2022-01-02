@@ -16,7 +16,7 @@ function SignIn() {
   const router = useRouter();
 
   function handleClick() {
-    router.push('/dashboard');
+    router.push('/city');
   }
 
   return (
@@ -51,7 +51,7 @@ function SignIn() {
               <a href="">Esqueci minha senha</a>
             </section>
 
-            <Button onClick={handleClick}/>
+            <Button onClick={handleClick} model='orange'>Acessar a plataforma</Button>
 
             <section id='warn'>
               <ErrorOutlineOutlined />

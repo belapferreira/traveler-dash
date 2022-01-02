@@ -1,13 +1,17 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import Container from '../../styles/components/Button';
 
-interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { };
+export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  model: 'orange' | 'green';
+  icon?: JSX.Element;
+};
 
-function Button({ onClick }: IButtonProps) {
+function Button({ onClick, model, icon, children }: IButtonProps) {
   return (
-    <Container>
-      <button onClick={onClick}>Acessar plataforma</button>
+    <Container onClick={onClick} model={model}>
+      {icon}
+      {children}
     </Container>
   )
 }

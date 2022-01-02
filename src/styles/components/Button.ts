@@ -1,30 +1,23 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-const Container = styled.div`
+import { IButtonProps } from '../../components/Button';
+
+const Container = styled.button<IButtonProps>`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 7.2rem;
-  background: var(--brand-orange);
+  border: none;
+  background: ${(props) => (props.model === 'orange' ? 'var(--brand-orange)' : 'var(--others-green)')};
+  font-size: ${(props) => (props.model === 'orange' ? '1.8rem' : '1.6rem')}
+  font-weight: 500;
+  color: var(--shapes-01);
   border-radius: 1rem;
 
   :hover {
-    background: ${shade(0.2, '#f25d27')}
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--shapes-01);
+    background: ${(props) => (props.model === 'orange' ?  shade(0.2, '#f25d27') : shade(0.2, '#51b853'))};
   }
 `;
 
