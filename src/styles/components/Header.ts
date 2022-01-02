@@ -5,6 +5,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  width: 100%;
+  height: 100%;
+  background: var(--shapes-01);
+
+  border-bottom: 1px solid var(--shapes-02);
+
   div {
     display: flex;
     justify-content: space-between;
@@ -12,12 +18,6 @@ const Container = styled.div`
     width: 100%;
     max-width: 77.78vw;
   }
-
-  width: 100%;
-  height: 11.71vh;
-  background: var(--shapes-01);
-
-  border-bottom: 1px solid var(--shapes-02);
 
   h1 {
     font-size: 3.6rem;

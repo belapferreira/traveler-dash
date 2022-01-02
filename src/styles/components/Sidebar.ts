@@ -6,8 +6,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  width: 6.67vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: var(--brand-orange);
 
   padding-top: 2.92vh;
