@@ -1,0 +1,108 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Águas Mornas",
+      "tourist_attractions": 3,
+      "food_drink": 6,
+      "events": 4,
+      "picture": "http://localhost:3001/águas-mornas-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "águas-mornas"
+    },
+    {
+      "id": 2,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Bombinhas",
+      "tourist_attractions": 5,
+      "food_drink": 15,
+      "events": 6,
+      "picture": "http://localhost:3001/bombinhas-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "bombinhas"
+    },
+    {
+      "id": 3,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Blumenau",
+      "tourist_attractions": 7,
+      "food_drink": 18,
+      "events": 8,
+      "picture": "http://localhost:3001/blumenau-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "blumenau"
+    },
+    {
+      "id": 4,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Florianópolis",
+      "tourist_attractions": 67,
+      "food_drink": 20,
+      "events": 11,
+      "picture": "http://localhost:3001/florianópolis-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "florianópolis"
+    },
+    {
+      "id": 5,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Imbituba",
+      "tourist_attractions": 32,
+      "food_drink": 20,
+      "events": 9,
+      "picture": "http://localhost:3001/imbituba-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "imbituba"
+    },
+    {
+      "id": 6,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Jaragua do Sul",
+      "tourist_attractions": 21,
+      "food_drink": 12,
+      "events": 8,
+      "picture": "http://localhost:3001/jaragua-do-sul-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "jaragua-do-sul"
+    },
+    {
+      "id": 7,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Lages",
+      "tourist_attractions": 9,
+      "food_drink": 7,
+      "events": 3,
+      "picture": "http://localhost:3001/lages-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "lages"
+    },
+    {
+      "id": 8,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "city": "Rio do Sul",
+      "tourist_attractions": 11,
+      "food_drink": 9,
+      "events": 7,
+      "picture": "http://localhost:3001/rio-do-sul-image.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
+      "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
+      "slug": "rio-do-sul"
+    }
+  ]
+}

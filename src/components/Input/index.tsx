@@ -10,10 +10,10 @@ export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 function Input({ type, placeholder, icon }: IInputProps) {
   return (
     <Container type={type}>
-      <input type="text" placeholder={placeholder}/>
+      <input type="text" placeholder={placeholder} />
       <div>{icon}</div>
     </Container>
-  )
+  );
 }
 
 export default Input;

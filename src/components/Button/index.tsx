@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 import Container from '../../styles/components/Button';
 
@@ -13,7 +13,7 @@ function Button({ onClick, model, icon, children }: IButtonProps) {
       {icon}
       {children}
     </Container>
-  )
+  );
 }
 
 export default Button;

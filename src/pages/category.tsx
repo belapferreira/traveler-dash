@@ -14,8 +14,12 @@ const Category: NextPage = () => (
     </Head>
 
     <Container>
-      <header><Header>Categorias</Header></header>
-      <aside><Sidebar /></aside>
+      <header>
+        <Header>Categorias</Header>
+      </header>
+      <aside>
+        <Sidebar />
+      </aside>
 
       <main></main>
     </Container>

@@ -35,7 +35,6 @@ export const Content = styled.div`
   width: 28.89vw;
   position: relative;
 
-
   h1 {
     margin-top: 22.68vh;
     font-family: 'Barlow';
@@ -63,10 +62,10 @@ export const Content = styled.div`
       margin-bottom: 3.9vh;
 
       a {
-          color: var(--textos-complemento);
-          font-size: 1.6rem;
-          font-family: 'Heebo';
-        }
+        color: var(--textos-complemento);
+        font-size: 1.6rem;
+        font-family: 'Heebo';
+      }
 
       div {
         display: flex;
@@ -114,8 +113,6 @@ export const Content = styled.div`
         color: var(--textos);
         margin-left: 1.67vw;
       }
-
     }
   }
-
 `;

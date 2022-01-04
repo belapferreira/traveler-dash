@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 6.67vw 93.33vw;
   grid-template-rows: 11.71vh 88.29vh;
-  grid-template-areas: "aside header" "aside main" ;
+  grid-template-areas: 'aside header' 'aside main';
 
   header {
     grid-area: header;

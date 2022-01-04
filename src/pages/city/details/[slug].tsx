@@ -18,13 +18,17 @@ function Detail() {
       </Head>
 
       <Container>
-        <header><Header>{router.query.slug}</Header></header>
-        <aside><Sidebar /></aside>
+        <header>
+          <Header>{router.query.slug}</Header>
+        </header>
+        <aside>
+          <Sidebar />
+        </aside>
 
         <main></main>
       </Container>
     </div>
-  )
-};
+  );
+}
 
 export default Detail;

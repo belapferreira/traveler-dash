@@ -42,7 +42,7 @@ const Container = styled.div`
     background: transparent;
 
     :hover {
-      background: ${shade(0.1, '#f25d27')}
+      background: ${shade(0.1, '#f25d27')};
     }
   }
 

@@ -14,10 +14,12 @@ function Header({ children }: IHeaderProps) {
     <Container>
       <div>
         <h1>{children}</h1>
-        <Button model='green' icon={<AddOutlined />}>Adicionar um perfil</Button>
+        <Button model="green" icon={<AddOutlined />}>
+          Adicionar um perfil
+        </Button>
       </div>
     </Container>
-  )
+  );
 }
 
 export default Header;
