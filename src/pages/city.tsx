@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
@@ -18,8 +17,6 @@ import RioDoSulImage from '../../public/images/rio-do-sul-image.png';
 import { Container } from '../styles/pages/City';
 
 function City() {
-  const router = useRouter();
-
   return (
     <div>
       <Head>
@@ -28,25 +25,69 @@ function City() {
       </Head>
 
       <Container>
-        <header><Header>Cidades</Header></header>
-        <aside><Sidebar /></aside>
+        <header>
+          <Header>Cidades</Header>
+        </header>
+        <aside>
+          <Sidebar />
+        </aside>
 
         <main>
           <section id="cards">
-            <Card picture={AguasMornasImage} city='Águas Mornas' count={13} />
-            <Card picture={BombinhasImage} city='Bombinhas' count={21} />
-            <Card picture={BlumenauImage} city='Blumenau' count={26} />
-            <Card picture={FlorianopolisImage} city='Florianópolis' count={98} />
+            <Card
+              picture={AguasMornasImage}
+              city="Águas Mornas"
+              count={13}
+              href={'/city/details/águas-mornas'}
+            />
+            <Card
+              picture={BombinhasImage}
+              city="Bombinhas"
+              count={21}
+              href={'/city/details/bombinhas'}
+            />
+            <Card
+              picture={BlumenauImage}
+              city="Blumenau"
+              count={26}
+              href={'/city/details/blumenau'}
+            />
+            <Card
+              picture={FlorianopolisImage}
+              city="Florianópolis"
+              count={98}
+              href={'/city/details/florianópolis'}
+            />
 
-            <Card picture={Imbituba} city='Imbituba' count={61} />
-            <Card picture={JaraguaDoSulImage} city='Jaragua do sul' count={41} />
-            <Card picture={LagesImage} city='Lages' count={19} />
-            <Card picture={RioDoSulImage} city='Rio do Sul' count={27} />
+            <Card
+              picture={Imbituba}
+              city="Imbituba"
+              count={61}
+              href={'/city/details/imbituba'}
+            />
+            <Card
+              picture={JaraguaDoSulImage}
+              city="Jaragua do sul"
+              count={41}
+              href={'/city/details/jaragua-do-sul'}
+            />
+            <Card
+              picture={LagesImage}
+              city="Lages"
+              count={19}
+              href={'/city/details/lages'}
+            />
+            <Card
+              picture={RioDoSulImage}
+              city="Rio do Sul"
+              count={27}
+              href={'/city/details/rio-do-sul'}
+            />
           </section>
         </main>
       </Container>
     </div>
-  )
-};
+  );
+}
 
 export default City;

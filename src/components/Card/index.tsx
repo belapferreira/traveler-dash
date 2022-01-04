@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 import Image from 'next/image';
 import { EditOutlined, DeleteOutlined } from '@material-ui/icons';
 
 import Container from '../../styles/components/Card';
 
-interface ICardProps {
+export type ICardProps = AnchorHTMLAttributes<HTMLButtonElement> & {
   picture: StaticImageData;
   city: string;
   count: number;
-}
+};
 
-function Card({ picture, city, count }: ICardProps) {
+function Card({ picture, city, count, href }: ICardProps) {
   return (
     <Container>
-      <div id="manage">
-        <Image src={picture} layout='responsive' objectFit='cover' />
-      </div>
+      <a href={href}>
+        <div id="manage">
+          <Image src={picture} layout="responsive" objectFit="cover" />
+        </div>
 
-      <div id="details">
-        <h2>{city}</h2>
-        <span>{count} locais</span>
-      </div>
+        <div id="details">
+          <h2>{city}</h2>
+          <span>{count} locais</span>
+        </div>
+      </a>
     </Container>
-  )
+  );
 }
 
 export default Card;
