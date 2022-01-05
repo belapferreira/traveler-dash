@@ -8,9 +8,9 @@ import {
   PowerSettingsNewOutlined,
 } from '@material-ui/icons';
 
-import TravelerIcon from '../../../public/images/traveler-icon.svg';
+import TravelerIcon from '@/../public/images/traveler-icon.svg';
 
-import Container from '../../styles/components/Sidebar';
+import Container from '@/styles/components/Sidebar';
 
 function Sidebar() {
   const router = useRouter();

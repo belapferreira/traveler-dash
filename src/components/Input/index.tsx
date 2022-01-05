@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes } from 'react';
 
-import Container from '../../styles/components/Input';
+import Container from '@/styles/components/Input';
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   type: 'top' | 'bottom' | 'single';

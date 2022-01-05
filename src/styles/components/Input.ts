@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IInputProps } from '../../components/Input';
+import { IInputProps } from '@/components/Input';
 
 const Container = styled.div<IInputProps>`
   display: flex;

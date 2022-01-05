@@ -2,10 +2,10 @@ import React, { AnchorHTMLAttributes } from 'react';
 import Image from 'next/image';
 import { EditOutlined, DeleteOutlined } from '@material-ui/icons';
 
-import Container from '../../styles/components/Card';
+import Container from '@/styles/components/Card';
 
 export type ICardProps = AnchorHTMLAttributes<HTMLButtonElement> & {
-  picture: StaticImageData;
+  picture: string;
   city: string;
   count: number;
 };
@@ -15,7 +15,13 @@ function Card({ picture, city, count, href }: ICardProps) {
     <Container>
       <a href={href}>
         <div id="manage">
-          <Image src={picture} layout="responsive" objectFit="cover" />
+          <Image
+            src={picture}
+            layout="responsive"
+            objectFit="cover"
+            width={256}
+            height={159}
+          />
         </div>
 
         <div id="details">

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import { IButtonProps } from '../../components/Button';
+import { IButtonProps } from '@/components/Button';
 
 const Container = styled.button<IButtonProps>`
   display: flex;

@@ -31,5 +31,9 @@ export const Container = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     grid-gap: 2.22vw;
     place-items: center;
+
+    .card {
+      width: 100%;
+    }
   }
 `;

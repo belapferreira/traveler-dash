@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 import { AddOutlined } from '@material-ui/icons';
 
-import Button from '../../components/Button';
+import Button from '@/components/Button';
 
-import Container from '../../styles/components/Header';
+import Container from '@/styles/components/Header';
 
 interface IHeaderProps {
   children: ReactNode;

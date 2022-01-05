@@ -9,10 +9,10 @@ import {
 } from '@material-ui/icons';
 import { Form } from '@unform/web';
 
-import Input from '../components/Input';
-import Button from '../components/Button';
+import Input from '@/components/Input';
+import Button from '@/components/Button';
 
-import SignInImage from '../../public/images/background-login-image.png';
+import SignInImage from '@/../public/images/background-login-image.png';
 
 import {
   Container,

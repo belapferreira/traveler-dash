@@ -8,10 +8,10 @@
       "tourist_attractions": 3,
       "food_drink": 6,
       "events": 4,
-      "picture": "http://localhost:3001/águas-mornas-image.png",
+      "picture": "/images/aguas-mornas-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
-      "slug": "águas-mornas"
+      "slug": "aguas-mornas"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "tourist_attractions": 5,
       "food_drink": 15,
       "events": 6,
-      "picture": "http://localhost:3001/bombinhas-image.png",
+      "picture": "/images/bombinhas-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "bombinhas"
@@ -34,7 +34,7 @@
       "tourist_attractions": 7,
       "food_drink": 18,
       "events": 8,
-      "picture": "http://localhost:3001/blumenau-image.png",
+      "picture": "/images/blumenau-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "blumenau"
@@ -47,10 +47,10 @@
       "tourist_attractions": 67,
       "food_drink": 20,
       "events": 11,
-      "picture": "http://localhost:3001/florianópolis-image.png",
+      "picture": "/images/florianopolis-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
-      "slug": "florianópolis"
+      "slug": "florianopolis"
     },
     {
       "id": 5,
@@ -60,7 +60,7 @@
       "tourist_attractions": 32,
       "food_drink": 20,
       "events": 9,
-      "picture": "http://localhost:3001/imbituba-image.png",
+      "picture": "/images/imbituba-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "imbituba"
@@ -73,7 +73,7 @@
       "tourist_attractions": 21,
       "food_drink": 12,
       "events": 8,
-      "picture": "http://localhost:3001/jaragua-do-sul-image.png",
+      "picture": "/images/jaragua-do-sul-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "jaragua-do-sul"
@@ -86,7 +86,7 @@
       "tourist_attractions": 9,
       "food_drink": 7,
       "events": 3,
-      "picture": "http://localhost:3001/lages-image.png",
+      "picture": "/images/lages-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "lages"
@@ -99,7 +99,7 @@
       "tourist_attractions": 11,
       "food_drink": 9,
       "events": 7,
-      "picture": "http://localhost:3001/rio-do-sul-image.png",
+      "picture": "/images/rio-do-sul-image.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis mollis ante, non volutpat metus posuere tincidunt. Proin accumsan velit.",
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "rio-do-sul"

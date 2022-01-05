@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import Sidebar from '../../../components/Sidebar';
-import Header from '../../../components/Header';
+import Sidebar from '@/components/Sidebar';
+import Header from '@/components/Header';
 
-import { Container } from '../../../styles/pages/city/details/[slug]';
+import { Container } from '@/styles/pages/city/details/[slug]';
 
 function Detail() {
   const router = useRouter();

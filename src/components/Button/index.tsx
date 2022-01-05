@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react';
 
-import Container from '../../styles/components/Button';
+import Container from '@/styles/components/Button';
 
 export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   model: 'orange' | 'green';

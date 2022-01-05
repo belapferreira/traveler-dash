@@ -1,22 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Sidebar from '../components/Sidebar';
-import Header from '../components/Header';
-import Card from '../components/Card';
+import Sidebar from '@/components/Sidebar';
+import Header from '@/components/Header';
+import Card from '@/components/Card';
 
-import AguasMornasImage from '../../public/images/águas-mornas-image.png';
-import BombinhasImage from '../../public/images/bombinhas-image.png';
-import BlumenauImage from '../../public/images/blumenau-image.png';
-import FlorianopolisImage from '../../public/images/florianópolis-image.png';
-import Imbituba from '../../public/images/imbituba-image.png';
-import JaraguaDoSulImage from '../../public/images/jaragua-do-sul-image.png';
-import LagesImage from '../../public/images/lages-image.png';
-import RioDoSulImage from '../../public/images/rio-do-sul-image.png';
+import { useGetCities } from '@/hooks/useGetCities';
+
+import AguasMornasImage from '@/../public/images/aguas-mornas-image.png';
 
 import { Container } from '../styles/pages/City';
 
 function City() {
+  const cities = useGetCities();
+
   return (
     <div>
       <Head>
@@ -34,6 +31,28 @@ function City() {
 
         <main>
           <section id="cards">
+            {cities.map((city) => (
+              <div key={city.id} className="card">
+                <Card
+                  picture={city.picture}
+                  city={city.city}
+                  count={
+                    city.tourist_attractions + city.food_drink + city.events
+                  }
+                  href={`/city/details/${city.slug}`}
+                />
+              </div>
+            ))}
+          </section>
+        </main>
+      </Container>
+    </div>
+  );
+}
+
+export default City;
+
+/*
             <Card
               picture={AguasMornasImage}
               city="Águas Mornas"
@@ -83,11 +102,4 @@ function City() {
               count={27}
               href={'/city/details/rio-do-sul'}
             />
-          </section>
-        </main>
-      </Container>
-    </div>
-  );
-}
-
-export default City;
+*/
