@@ -25,6 +25,13 @@ const Container = styled.div`
       border-radius: 1.6rem 1.6rem 0 0;
       max-height: 159px;
     }
+
+    #buttons {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
   }
 
   #details {

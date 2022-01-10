@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -11,6 +12,43 @@ export const Container = styled.div`
 
   header {
     grid-area: header;
+
+    div {
+      justify-content: flex-end;
+    }
+
+    #left {
+      display: flex;
+      justify-content: flex-start;
+
+      #back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        background: var(--shapes-01);
+        border: 1px solid var(--shapes-02);
+        border-radius: 10px;
+
+        :hover {
+          background: ${shade(0.01, '#dce2e6')};
+        }
+
+        svg {
+          font-size: 20px;
+          color: var(--textos);
+        }
+      }
+    }
+
+    #right {
+      button {
+        margin-left: 1.67vw;
+        max-width: 14.86vw;
+        max-height: 5.85vh;
+      }
+    }
   }
 
   aside {
@@ -19,9 +57,5 @@ export const Container = styled.div`
 
   main {
     grid-area: main;
-  }
-
-  div > div > button {
-    display: none;
   }
 `;

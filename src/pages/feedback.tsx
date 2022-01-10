@@ -14,9 +14,10 @@ const Main: NextPage = () => (
     </Head>
 
     <Container>
-      <header>
-        <Header>Feedbacks</Header>
-      </header>
+      <Header>
+        <h1>Feedbacks</h1>
+      </Header>
+
       <aside>
         <Sidebar />
       </aside>

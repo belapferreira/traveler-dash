@@ -1,6 +1,7 @@
 import React, { AnchorHTMLAttributes } from 'react';
 import Image from 'next/image';
-import { EditOutlined, DeleteOutlined } from '@material-ui/icons';
+
+import ManageButtons from '@/components/ManageButtons';
 
 import Container from '@/styles/components/Card';
 
@@ -8,9 +9,18 @@ export type ICardProps = AnchorHTMLAttributes<HTMLButtonElement> & {
   picture: string;
   city: string;
   count: number;
+  hrefEdit: string;
+  hrefDelete: string;
 };
 
-function Card({ picture, city, count, href }: ICardProps) {
+function Card({
+  picture,
+  city,
+  count,
+  href,
+  hrefEdit,
+  hrefDelete,
+}: ICardProps) {
   return (
     <Container>
       <a href={href}>
@@ -22,6 +32,10 @@ function Card({ picture, city, count, href }: ICardProps) {
             width={256}
             height={159}
           />
+
+          <div id="buttons">
+            <ManageButtons hrefEdit={hrefEdit} hrefDelete={hrefDelete} />
+          </div>
         </div>
 
         <div id="details">

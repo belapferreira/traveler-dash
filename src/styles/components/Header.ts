@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,22 +13,9 @@ const Container = styled.div`
 
   div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 77.78vw;
-  }
-
-  h1 {
-    font-size: 3.6rem;
-    font-family: 'Barlow';
-    color: var(--textos-títulos);
-  }
-
-  button {
-    background: var(--others-green);
-    max-width: 14.86vw;
-    max-height: 5.85vh;
   }
 `;
 

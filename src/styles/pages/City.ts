@@ -11,6 +11,22 @@ export const Container = styled.div`
 
   header {
     grid-area: header;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: 3.6rem;
+      font-family: 'Barlow';
+      color: var(--textos-títulos);
+    }
+
+    button {
+      max-width: 14.86vw;
+      max-height: 5.85vh;
+    }
   }
 
   aside {

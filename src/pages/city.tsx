@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
+import { AddOutlined } from '@material-ui/icons';
 
+import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import Card from '@/components/Card';
 
 import { useGetCities } from '@/hooks/useGetCities';
-
-import AguasMornasImage from '@/../public/images/aguas-mornas-image.png';
 
 import { Container } from '../styles/pages/City';
 
@@ -22,9 +22,13 @@ function City() {
       </Head>
 
       <Container>
-        <header>
-          <Header>Cidades</Header>
-        </header>
+        <Header>
+          <h1>Cidades</h1>
+          <Button model="green" icon={<AddOutlined />}>
+            Adicionar um perfil
+          </Button>
+        </Header>
+
         <aside>
           <Sidebar />
         </aside>
@@ -40,6 +44,8 @@ function City() {
                     city.tourist_attractions + city.food_drink + city.events
                   }
                   href={`/city/details/${city.slug}`}
+                  hrefEdit={`/city/edit/${city.slug}`}
+                  hrefDelete={`/city/delete/${city.slug}`}
                 />
               </div>
             ))}
@@ -52,54 +58,24 @@ function City() {
 
 export default City;
 
+// Server Side Rendering
 /*
-            <Card
-              picture={AguasMornasImage}
-              city="Águas Mornas"
-              count={13}
-              href={'/city/details/águas-mornas'}
-            />
-            <Card
-              picture={BombinhasImage}
-              city="Bombinhas"
-              count={21}
-              href={'/city/details/bombinhas'}
-            />
-            <Card
-              picture={BlumenauImage}
-              city="Blumenau"
-              count={26}
-              href={'/city/details/blumenau'}
-            />
-            <Card
-              picture={FlorianopolisImage}
-              city="Florianópolis"
-              count={98}
-              href={'/city/details/florianópolis'}
-            />
+  import { GetServerSideProps } from 'next';
+  import { getCities, IDataParams } from '@/services/city.service';
 
-            <Card
-              picture={Imbituba}
-              city="Imbituba"
-              count={61}
-              href={'/city/details/imbituba'}
-            />
-            <Card
-              picture={JaraguaDoSulImage}
-              city="Jaragua do sul"
-              count={41}
-              href={'/city/details/jaragua-do-sul'}
-            />
-            <Card
-              picture={LagesImage}
-              city="Lages"
-              count={19}
-              href={'/city/details/lages'}
-            />
-            <Card
-              picture={RioDoSulImage}
-              city="Rio do Sul"
-              count={27}
-              href={'/city/details/rio-do-sul'}
-            />
+  interface ICities {
+    cities: IDataParams[];
+  }
+
+  function City({ cities }: ICities) {}
+
+  export const getServerSideProps: GetServerSideProps<ICities> = async () => {
+    const cities = await getCities();
+
+    return {
+      props: {
+        cities,
+      },
+    };
+  };
 */

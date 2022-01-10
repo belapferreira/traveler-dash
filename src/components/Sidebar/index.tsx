@@ -15,8 +15,6 @@ import Container from '@/styles/components/Sidebar';
 function Sidebar() {
   const router = useRouter();
 
-  console.log(router.pathname.includes('/city'));
-
   return (
     <Container>
       <Image src={TravelerIcon} />

@@ -20,8 +20,4 @@ export const Container = styled.div`
   main {
     grid-area: main;
   }
-
-  div > div > button {
-    display: none;
-  }
 `;
