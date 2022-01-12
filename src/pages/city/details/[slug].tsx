@@ -1,14 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
-import { AddOutlined, ArrowBack } from '@material-ui/icons';
+import {
+  AddOutlined,
+  ArrowBack,
+  LocalSeeOutlined,
+  FreeBreakfastOutlined,
+  CalendarTodayOutlined,
+} from '@material-ui/icons';
 
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import ManageButtons from '@/components/ManageButtons';
 import Button from '@/components/Button';
+
+import ImageTest from '../../../../public/images/aguas-mornas-image.png';
 
 import { getCities, getCityBySlug, IDataParams } from '@/services/city.service';
 
@@ -61,7 +70,57 @@ function Detail({ city }: IDetail) {
           <Sidebar />
         </aside>
 
-        <main></main>
+        <main>
+          <div id="cover">
+            <Image
+              src={city[0].picture}
+              layout="fill"
+              objectFit="cover"
+              width={1344}
+              height={340}
+            />
+          </div>
+
+          <section id="details">
+            <div id="city-detail">
+              <h1>{city[0].city}</h1>
+              <p>{city[0].description}</p>
+              <span>{city[0].detail}</span>
+            </div>
+
+            <div id="city-data">
+              <div className="card">
+                <div className="icon">
+                  <LocalSeeOutlined />
+                </div>
+                <div className="data">
+                  <strong>{city[0].tourist_attractions}</strong>
+                  <span>Pontos turísticos</span>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="icon">
+                  <FreeBreakfastOutlined />
+                </div>
+                <div className="data">
+                  <strong>{city[0].food_drink}</strong>
+                  <span>Comidas e bebidas</span>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="icon">
+                  <CalendarTodayOutlined />
+                </div>
+                <div className="data">
+                  <strong>{city[0].food_drink}</strong>
+                  <span>Eventos organizados</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </Container>
     </div>
   );
