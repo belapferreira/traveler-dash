@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: 6.67vw 93.33vw;
@@ -35,21 +36,22 @@ export const Container = styled.div`
 
   main {
     grid-area: main;
-  }
+    overflow-y: scroll;
 
-  #cards {
-    width: 90%;
-    max-width: 77.78vw;
-    margin: auto;
-    padding-top: 5.85vh;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    grid-gap: 2.22vw;
-    place-items: center;
-
-    .card {
+    #cards {
       width: 100%;
+      max-width: 77.78vw;
+      margin: auto;
+      padding-top: 5.85vh;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+      grid-gap: 2.22vw;
+      place-items: center;
+
+      .card {
+        width: 100%;
+      }
     }
   }
 `;

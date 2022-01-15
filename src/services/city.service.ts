@@ -1,6 +1,6 @@
 import api from './api';
 
-export interface IDataParams {
+export interface ICityParams {
   id?: number;
   createdAt: Date;
   udatedAt: Date;
@@ -14,14 +14,14 @@ export interface IDataParams {
   slug: string;
 }
 
-export const getCities = async (): Promise<IDataParams[]> => {
+export const getCities = async (): Promise<ICityParams[]> => {
   const { data } = await api.get('/cities');
   return data;
 };
 
 export const getCityBySlug = async (
   slug: string | string[] | undefined,
-): Promise<IDataParams[]> => {
+): Promise<ICityParams[]> => {
   const { data } = await api.get(`/cities?slug=${slug}`);
   return data;
 };

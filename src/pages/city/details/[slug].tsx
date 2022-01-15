@@ -16,28 +16,40 @@ import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import ManageButtons from '@/components/ManageButtons';
 import Button from '@/components/Button';
+import CardLocal from '@/components/CardLocal';
 
-import ImageTest from '../../../../public/images/aguas-mornas-image.png';
-
-import { getCities, getCityBySlug, IDataParams } from '@/services/city.service';
+import { getCities, getCityBySlug, ICityParams } from '@/services/city.service';
+import { getLocalsByCity, ILocalParams } from '@/services/locals.service';
 
 import { Container } from '@/styles/pages/city/details/[slug]';
 
 interface IDetail {
-  city: IDataParams[];
+  city: ICityParams[];
+  locals: ILocalParams[];
 }
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-function Detail({ city }: IDetail) {
+function CityDetail({ city, locals }: IDetail) {
   // Incremental Static Generation
   const router = useRouter();
 
   if (router.isFallback) {
     return <span>Loading...</span>;
   }
+
+  // Four best locals which status is regular
+  const localsRegular = locals.filter((local) => local.status === 'regular');
+  const localsBetterRatedSorted = localsRegular
+    .sort((a, b) => (a.rate < b.rate ? 1 : -1))
+    .splice(0, 4);
+
+  // Local which statis is highlighted
+  const localHighlighted = locals.filter(
+    (local) => local.status === 'highlighted',
+  );
 
   return (
     <div>
@@ -72,13 +84,7 @@ function Detail({ city }: IDetail) {
 
         <main>
           <div id="cover">
-            <Image
-              src={city[0].picture}
-              layout="fill"
-              objectFit="cover"
-              width={1344}
-              height={340}
-            />
+            <Image src={city[0].picture} layout="fill" objectFit="cover" />
           </div>
 
           <section id="details">
@@ -120,13 +126,33 @@ function Detail({ city }: IDetail) {
               </div>
             </div>
           </section>
+
+          <section id="best-rate">
+            <h2>Top avaliados</h2>
+
+            <div id="local-cards">
+              {localsBetterRatedSorted.map((local) => (
+                <div key={local.id} className="local-card">
+                  <CardLocal
+                    picture={local.picture}
+                    name={local.name}
+                    category={local.category}
+                    rate={local.rate}
+                    href={`/city/local/details/${local.slug}`}
+                    hrefEdit={`/city/local/edit/${local.slug}`}
+                    hrefDelete={`/city/local/delete/${local.slug}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
         </main>
       </Container>
     </div>
   );
 }
 
-export default Detail;
+export default CityDetail;
 
 // Dinamic Static Site Generation
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -148,10 +174,12 @@ export const getStaticProps: GetStaticProps<IDetail> = async (context) => {
   const { slug } = context.params as IParams;
 
   const city = await getCityBySlug(slug);
+  const locals = await getLocalsByCity(city[0].city);
 
   return {
     props: {
       city,
+      locals,
     },
     revalidate: 10,
   };

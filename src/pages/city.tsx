@@ -5,7 +5,7 @@ import { AddOutlined } from '@material-ui/icons';
 import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
-import Card from '@/components/Card';
+import CardCity from '@/components/CardCity';
 
 import { useGetCities } from '@/hooks/useGetCities';
 
@@ -37,7 +37,7 @@ function City() {
           <section id="cards">
             {cities.map((city) => (
               <div key={city.id} className="card">
-                <Card
+                <CardCity
                   picture={city.picture}
                   city={city.city}
                   count={

@@ -104,5 +104,72 @@
       "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna nisi, cursus id aliquet.",
       "slug": "rio-do-sul"
     }
+  ],
+  "locals": [
+    {
+      "id": 1,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "name": "Doces & Companhia",
+      "city": "Florianópolis",
+      "type": "food_drink",
+      "category": "Comidas e bebidas",
+      "rate": 4.7,
+      "picture": "/images/doces-e-companhia-image.png",
+      "status": "regular",
+      "slug": "doces-e-companhia"
+    },
+    {
+      "id": 2,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "name": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "type": "tourist_attractions",
+      "category": "Pontos turísticos",
+      "rate": 5.0,
+      "picture": "/images/lagoa-da-conceicao-image.png",
+      "status": "regular",
+      "slug": "lagoa-da-conceicao"
+    },
+    {
+      "id": 3,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "name": "Praia do Campeche",
+      "city": "Florianópolis",
+      "type": "tourist_attractions",
+      "category": "Pontos turísticos",
+      "rate": 4.9,
+      "picture": "/images/praia-do-campeche-image.png",
+      "status": "regular",
+      "slug": "praia-do-campeche"
+    },
+    {
+      "id": 4,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "name": "Expo Tattoo Floripa",
+      "city": "Florianópolis",
+      "type": "events",
+      "category": "Eventos organizados",
+      "rate": 5.0,
+      "picture": "/images/expo-tattoo-floripa-image.png",
+      "status": "regular",
+      "slug": "expo-tatto-floripa"
+    },
+    {
+      "id": 5,
+      "created_at": "27/12/2021",
+      "udated_at": "27/12/2021",
+      "name": "Praia dos Ingleses",
+      "city": "Florianópolis",
+      "type": "tourist_attractions",
+      "category": "Pontos turísticos",
+      "rate": 5.0,
+      "picture": "/images/praia-dos-ingleses-image.png",
+      "status": "highlighted",
+      "slug": "praia-dos-ingleses"
+    }
   ]
 }

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import ManageButtons from '@/components/ManageButtons';
 
-import Container from '@/styles/components/Card';
+import Container from '@/styles/components/CardCity';
 
 export type ICardProps = AnchorHTMLAttributes<HTMLButtonElement> & {
   picture: string;
@@ -13,7 +13,7 @@ export type ICardProps = AnchorHTMLAttributes<HTMLButtonElement> & {
   hrefDelete: string;
 };
 
-function Card({
+function CardCity({
   picture,
   city,
   count,
@@ -47,4 +47,4 @@ function Card({
   );
 }
 
-export default Card;
+export default CardCity;
