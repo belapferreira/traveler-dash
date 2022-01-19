@@ -6,6 +6,7 @@ export interface ILocalParams {
   udatedAt: Date;
   name: string;
   city: string;
+  description: string;
   type: string;
   category: string;
   rate: number;

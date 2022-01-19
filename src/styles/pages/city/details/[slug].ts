@@ -70,7 +70,7 @@ export const Container = styled.div`
       display: flex;
 
       width: 100%;
-      max-width: 77.78vw;
+      max-width: 1120px;
       height: 46.83vh;
 
       margin: auto;
@@ -118,7 +118,7 @@ export const Container = styled.div`
 
         .card {
           display: block;
-          min-width: 11.11vw;
+          width: 160px;
 
           .icon {
             border-radius: 20px 20px 0 0;
@@ -137,7 +137,7 @@ export const Container = styled.div`
             flex-direction: column;
             border-radius: 0 0 20px 20px;
             border: 1px solid var(--shapes-02);
-            padding: 3.9vh 0 3.9vh 3.9vh;
+            padding: 2.22vw;
 
             strong {
               font-size: 4rem;
@@ -151,7 +151,6 @@ export const Container = styled.div`
               font-size: 1.6rem;
               color: var(--textos);
               font-family: 'Heebo';
-              width: 4.93vw;
             }
           }
         }
@@ -159,7 +158,7 @@ export const Container = styled.div`
     }
 
     #best-rate {
-      max-width: 77.78vw;
+      max-width: 1120px;
       margin: auto;
       padding-top: 5.85vh;
 
@@ -171,12 +170,159 @@ export const Container = styled.div`
 
       #local-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 2.22vw;
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+        gap: 32px;
         place-items: center;
 
         .local-card {
           width: 100%;
+        }
+      }
+    }
+
+    #highlighted {
+      display: flex;
+      margin-top: 9.76vh;
+      margin-bottom: 9.76vh;
+
+      background: var(--shapes-01);
+      border-radius: 16px;
+      border: 1px solid var(--shapes-02);
+
+      #info {
+        width: 50%;
+        padding: 46px 60px 46px 64px;
+
+        > h2 {
+          font-size: 3.6rem;
+          color: var(--textos-títulos);
+          font-family: 'Barlow';
+          font-weight: 600;
+          margin-bottom: 16px;
+        }
+
+        > span {
+          font-size: 1.6rem;
+          color: var(--textos);
+          font-family: 'Heebo';
+          line-height: 26px;
+        }
+
+        #top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 32px;
+
+          #label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            border-radius: 100px;
+            background: var(--brand-orange);
+            color: var(--shapes-01);
+            padding: 8px;
+
+            svg {
+              font-size: 2rem;
+            }
+
+            span {
+              font-size: 1.4rem;
+              margin-left: 8px;
+            }
+          }
+
+          #top-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              font-size: 2.4rem;
+              color: var(--brand-orange);
+            }
+
+            span {
+              font-size: 1.6rem;
+              font-family: 'Barlow';
+              font-weight: 500;
+              color: var(--textos);
+              margin-left: 32px;
+            }
+          }
+        }
+      }
+
+      #image {
+        position: relative;
+        height: 34.88vh;
+        min-height: 286px;
+        width: 50%;
+
+        img {
+          border-radius: 0 16px 16px 0;
+        }
+
+        #buttons {
+          position: absolute;
+          z-index: 1;
+          top: 16px;
+          right: 16px;
+        }
+      }
+    }
+
+    #all {
+      margin-bottom: 9.76vh;
+
+      #all-locals {
+        max-width: 1120px;
+        margin: auto;
+
+        #filter {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 5.85vh;
+
+          > h2 {
+            font-size: 3.6rem;
+            color: var(--textos-títulos);
+          }
+
+          #categories {
+            border-bottom: 1px solid var(--shapes-02);
+
+            button {
+              background: var(--background);
+              border: none;
+              font-size: 1.6rem;
+              font-family: 'Heebo';
+              color: var(--textos);
+              padding-bottom: 12px;
+            }
+
+            button.active {
+              border-bottom: 2px solid var(--brand-orange);
+            }
+
+            button + button {
+              margin-left: 32px;
+            }
+          }
+        }
+
+        #local-cards {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(256px, 256px));
+          gap: 32px;
+          place-items: center;
+
+          .local-card {
+            width: 100%;
+          }
         }
       }
     }

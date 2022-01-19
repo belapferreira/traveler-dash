@@ -8,6 +8,7 @@ import {
 } from '@material-ui/icons';
 
 import ManageButtons from '@/components/ManageButtons';
+import { categoryIcon } from '@/utils/categoryIcon';
 
 import Container from '@/styles/components/CardLocal';
 
@@ -29,15 +30,7 @@ function CardLocal({
   hrefEdit,
   hrefDelete,
 }: ICardProps) {
-  let Icon;
-
-  if (category === 'Pontos turísticos') {
-    Icon = LocalSeeOutlined;
-  } else if (category === 'Comidas e bebidas') {
-    Icon = FreeBreakfastOutlined;
-  } else {
-    Icon = CalendarTodayOutlined;
-  }
+  let Icon = categoryIcon(category);
 
   return (
     <Container>

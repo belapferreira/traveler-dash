@@ -40,13 +40,13 @@ export const Container = styled.div`
 
     #cards {
       width: 100%;
-      max-width: 77.78vw;
+      max-width: 1120px;
       margin: auto;
       padding-top: 5.85vh;
 
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-      grid-gap: 2.22vw;
+      gap: 32px;
       place-items: center;
 
       .card {

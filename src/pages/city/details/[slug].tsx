@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, MouseEvent } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -10,6 +10,7 @@ import {
   LocalSeeOutlined,
   FreeBreakfastOutlined,
   CalendarTodayOutlined,
+  ErrorOutlineOutlined,
 } from '@material-ui/icons';
 
 import Sidebar from '@/components/Sidebar';
@@ -20,6 +21,8 @@ import CardLocal from '@/components/CardLocal';
 
 import { getCities, getCityBySlug, ICityParams } from '@/services/city.service';
 import { getLocalsByCity, ILocalParams } from '@/services/locals.service';
+
+import { categoryIcon } from '@/utils/categoryIcon';
 
 import { Container } from '@/styles/pages/city/details/[slug]';
 
@@ -35,6 +38,7 @@ interface IParams extends ParsedUrlQuery {
 function CityDetail({ city, locals }: IDetail) {
   // Incremental Static Generation
   const router = useRouter();
+  const [tabButtonActive, setTabButtonActive] = useState('Todos');
 
   if (router.isFallback) {
     return <span>Loading...</span>;
@@ -50,6 +54,24 @@ function CityDetail({ city, locals }: IDetail) {
   const localHighlighted = locals.filter(
     (local) => local.status === 'highlighted',
   );
+
+  // Locals filtered acconding button selected
+  let localsFiltered;
+
+  if (tabButtonActive === 'Todos') {
+    localsFiltered = locals;
+  } else {
+    localsFiltered = locals.filter(
+      (localFiltered) => localFiltered.category === tabButtonActive,
+    );
+  }
+
+  const Icon = categoryIcon(localHighlighted[0].category);
+
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    const text = event.target as HTMLElement;
+    setTabButtonActive(text.innerText);
+  };
 
   return (
     <div>
@@ -144,6 +166,107 @@ function CityDetail({ city, locals }: IDetail) {
                   />
                 </div>
               ))}
+            </div>
+
+            <div id="highlighted">
+              <div id="info">
+                <div id="top">
+                  <div id="top-left">
+                    <div id="label">
+                      <ErrorOutlineOutlined />
+                      <span>Destaque</span>
+                    </div>
+                  </div>
+
+                  <div id="top-right">
+                    <Icon />
+                    <span>{localHighlighted[0].category}</span>
+                  </div>
+                </div>
+
+                <h2>{localHighlighted[0].name}</h2>
+                <span>{localHighlighted[0].description}</span>
+              </div>
+
+              <div id="image">
+                <Image
+                  src={localHighlighted[0].picture}
+                  layout="fill"
+                  objectFit="cover"
+                />
+
+                <div id="buttons">
+                  <ManageButtons
+                    hrefEdit={`/city/local/edit/${localHighlighted[0].slug}`}
+                    hrefDelete={`/city/local/delete/${localHighlighted[0].slug}`}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="all">
+            <div id="all-locals">
+              <div id="filter">
+                <h2>Conheça todos</h2>
+                <div id="categories">
+                  <button
+                    id="food_drink"
+                    onClick={handleClick}
+                    className={
+                      tabButtonActive === 'Todos' ? 'active' : 'noActive'
+                    }
+                  >
+                    Todos
+                  </button>
+                  <button
+                    onClick={handleClick}
+                    className={
+                      tabButtonActive === 'Pontos turísticos'
+                        ? 'active'
+                        : 'noActive'
+                    }
+                  >
+                    Pontos turísticos
+                  </button>
+                  <button
+                    onClick={handleClick}
+                    className={
+                      tabButtonActive === 'Comidas e bebidas'
+                        ? 'active'
+                        : 'noActive'
+                    }
+                  >
+                    Comidas e bebidas
+                  </button>
+                  <button
+                    onClick={handleClick}
+                    className={
+                      tabButtonActive === 'Eventos organizados'
+                        ? 'active'
+                        : 'noActive'
+                    }
+                  >
+                    Eventos organizados
+                  </button>
+                </div>
+              </div>
+
+              <div id="local-cards">
+                {localsFiltered.map((localFiltered) => (
+                  <div key={localFiltered.id} className="local-card">
+                    <CardLocal
+                      picture={localFiltered.picture}
+                      name={localFiltered.name}
+                      category={localFiltered.category}
+                      rate={localFiltered.rate}
+                      href={`/city/local/details/${localFiltered.slug}`}
+                      hrefEdit={`/city/local/edit/${localFiltered.slug}`}
+                      hrefDelete={`/city/local/delete/${localFiltered.slug}`}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         </main>
