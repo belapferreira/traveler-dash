@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ArrowBack } from '@material-ui/icons';
@@ -6,11 +6,29 @@ import { ArrowBack } from '@material-ui/icons';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import AddCity from '@/components/AddCity';
+import AddLocal from '@/components/AddLocal';
 
 import { Container } from '@/styles/pages/city/new';
 
 function NewCity() {
   const router = useRouter();
+  const [step, setStep] = useState(1);
+
+  function goNextStep() {
+    if (step === 2) {
+      return;
+    } else {
+      setStep((step) => step + 1);
+    }
+  }
+
+  function goBackStep() {
+    if (step === 1) {
+      router.back();
+    } else {
+      setStep((step) => step - 1);
+    }
+  }
 
   return (
     <div>
@@ -22,7 +40,7 @@ function NewCity() {
       <Container>
         <Header>
           <div id="left">
-            <button id="back" onClick={() => router.back()}>
+            <button id="back" onClick={() => goBackStep()}>
               <ArrowBack />
             </button>
           </div>
@@ -42,7 +60,8 @@ function NewCity() {
 
         <main>
           <div id="content">
-            <AddCity />
+            {step === 1 && <AddCity goNextStep={goNextStep} />}
+            {step === 2 && <AddLocal />}
           </div>
         </main>
       </Container>

@@ -6,7 +6,11 @@ import Button from '@/components/Button';
 
 import Container from '@/styles/components/AddCity';
 
-function AddCity() {
+interface IAddCity {
+  goNextStep: () => void;
+}
+
+function AddCity({ goNextStep }: IAddCity) {
   return (
     <Container>
       <div id="title">
@@ -43,7 +47,9 @@ function AddCity() {
             </span>
           </div>
 
-          <Button model="blue">Próximo</Button>
+          <Button model="blue" onClick={goNextStep}>
+            Próximo
+          </Button>
         </div>
       </div>
     </Container>
