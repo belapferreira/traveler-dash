@@ -25,8 +25,8 @@ export const Container = styled.div`
     }
 
     button {
-      max-width: 14.86vw;
-      max-height: 5.85vh;
+      width: 214px;
+      height: 48px;
     }
   }
 

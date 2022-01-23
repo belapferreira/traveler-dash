@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { AddOutlined } from '@material-ui/icons';
 
 import Button from '@/components/Button';
@@ -13,6 +14,7 @@ import { Container } from '../styles/pages/City';
 
 function City() {
   const cities = useGetCities();
+  const router = useRouter();
 
   return (
     <div>
@@ -24,7 +26,11 @@ function City() {
       <Container>
         <Header>
           <h1>Cidades</h1>
-          <Button model="green" icon={<AddOutlined />}>
+          <Button
+            model="green"
+            icon={<AddOutlined />}
+            onClick={() => router.push('/city/new')}
+          >
             Adicionar um perfil
           </Button>
         </Header>
