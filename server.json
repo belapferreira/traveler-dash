@@ -118,6 +118,52 @@
       "rate": 4.7,
       "picture": "/images/doces-e-companhia-image.png",
       "status": "regular",
+      "phone": "(47) 3598 7815",
+      "address": "Rua 7 de Setembro, 319 - Jardim América 89160-170",
+      "opening": [
+        {
+          "day": "sunday",
+          "status": "closed",
+          "start": null,
+          "end": null
+        },
+        {
+          "day": "monday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "tuesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "wednesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "thursday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "friday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "saturday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        }
+      ],
       "slug": "doces-e-companhia"
     },
     {
@@ -132,6 +178,52 @@
       "rate": 5.0,
       "picture": "/images/lagoa-da-conceicao-image.png",
       "status": "regular",
+      "phone": "(00) 0000 0000",
+      "address": "Rua Xxxxx, 000 - Xxxxxxxx 00000-000",
+      "opening": [
+        {
+          "day": "sunday",
+          "status": "closed",
+          "start": null,
+          "end": null
+        },
+        {
+          "day": "monday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "tuesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "wednesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "thursday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "friday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "saturday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        }
+      ],
       "slug": "lagoa-da-conceicao"
     },
     {
@@ -146,6 +238,52 @@
       "rate": 4.9,
       "picture": "/images/praia-do-campeche-image.png",
       "status": "regular",
+      "phone": "(00) 0000 0000",
+      "address": "Rua Xxxxx, 000 - Xxxxxxxx 00000-000",
+      "opening": [
+        {
+          "day": "sunday",
+          "status": "closed",
+          "start": null,
+          "end": null
+        },
+        {
+          "day": "monday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "tuesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "wednesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "thursday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "friday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "saturday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        }
+      ],
       "slug": "praia-do-campeche"
     },
     {
@@ -160,6 +298,52 @@
       "rate": 5.0,
       "picture": "/images/expo-tattoo-floripa-image.png",
       "status": "regular",
+      "phone": "(00) 0000 0000",
+      "address": "Rua Xxxxx, 000 - Xxxxxxxx 00000-000",
+      "opening": [
+        {
+          "day": "sunday",
+          "status": "closed",
+          "start": null,
+          "end": null
+        },
+        {
+          "day": "monday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "tuesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "wednesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "thursday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "friday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "saturday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        }
+      ],
       "slug": "expo-tatto-floripa"
     },
     {
@@ -174,6 +358,52 @@
       "rate": 5.0,
       "picture": "/images/praia-dos-ingleses-image.png",
       "status": "highlighted",
+      "phone": "(00) 0000 0000",
+      "address": "Rua Xxxxx, 000 - Xxxxxxxx 00000-000",
+      "opening": [
+        {
+          "day": "sunday",
+          "status": "closed",
+          "start": null,
+          "end": null
+        },
+        {
+          "day": "monday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "tuesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "wednesday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "thursday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "friday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "day": "saturday",
+          "status": "open",
+          "start": 8,
+          "end": 19
+        }
+      ],
       "slug": "praia-dos-ingleses"
     }
   ]

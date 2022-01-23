@@ -12,8 +12,23 @@ export interface ILocalParams {
   rate: number;
   picture: string;
   status: string;
+  phone: string;
+  address: string;
+  opening: IOpening[];
   slug: string;
 }
+
+interface IOpening {
+  day: string;
+  status: string;
+  start: number;
+  end: number;
+}
+
+export const getLocals = async (): Promise<ILocalParams[]> => {
+  const { data } = await api.get('/locals');
+  return data;
+};
 
 export const getLocalsByCity = async (
   city: string,

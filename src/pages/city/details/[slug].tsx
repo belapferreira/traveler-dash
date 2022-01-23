@@ -26,7 +26,7 @@ import { categoryIcon } from '@/utils/categoryIcon';
 
 import { Container } from '@/styles/pages/city/details/[slug]';
 
-interface IDetail {
+interface ICityDetail {
   city: ICityParams[];
   locals: ILocalParams[];
 }
@@ -35,7 +35,7 @@ interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-function CityDetail({ city, locals }: IDetail) {
+function CityDetail({ city, locals }: ICityDetail) {
   // Incremental Static Generation
   const router = useRouter();
   const [tabButtonActive, setTabButtonActive] = useState('Todos');
@@ -293,7 +293,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 // Static Site Generation
-export const getStaticProps: GetStaticProps<IDetail> = async (context) => {
+export const getStaticProps: GetStaticProps<ICityDetail> = async (context) => {
   const { slug } = context.params as IParams;
 
   const city = await getCityBySlug(slug);
