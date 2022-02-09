@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/images/traveler-dash-symbol.svg" width="30%" alt="Traveler Dash"/>
+  <img src="frontend/public/images/traveler-dash-symbol.svg" width="30%" alt="Traveler Dash"/>
 </p>
 
 <h3 align="center">
@@ -15,8 +15,8 @@
 </br>
 
 <p align="center" display="flex">
-  <img src="public/images/traveler-login.png" width="30%" max-width="100%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="public/images/traveler-main.png" width="30%" max-width="100%" />
+  <img src="frontend/public/images/traveler-login.png" width="30%" max-width="100%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="frontend/public/images/traveler-main.png" width="30%" max-width="100%" />
 </p>
 
 </br>
