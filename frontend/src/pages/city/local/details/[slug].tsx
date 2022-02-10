@@ -15,7 +15,7 @@ import {
   getLocals,
   getLocalBySlug,
   ILocalParams,
-} from '@/services/locals.service';
+} from '@/services/local.service';
 
 import { weekDay } from '@/utils/weekDays';
 
@@ -32,9 +32,9 @@ interface IParams extends ParsedUrlQuery {
 function LocalDetail({ local }: ILocalDetail) {
   const router = useRouter();
 
-  const days = local[0].opening;
+  const phone = local[0]?.phone;
 
-  const phone = local[0].phone;
+  console.log('Local', local);
 
   return (
     <div>
@@ -53,8 +53,8 @@ function LocalDetail({ local }: ILocalDetail) {
 
           <div id="right">
             <ManageButtons
-              hrefEdit={`/city/local/edit/${local[0].slug}`}
-              hrefDelete={`/city/local/delete/${local[0].slug}`}
+              hrefEdit={`/city/local/edit/${local[0]?.slug}`}
+              hrefDelete={`/city/local/delete/${local[0]?.slug}`}
             />
           </div>
         </Header>
@@ -67,8 +67,8 @@ function LocalDetail({ local }: ILocalDetail) {
           <section id="details">
             <div id="content">
               <div id="city-detail">
-                <h1>{local[0].name}</h1>
-                <p>{local[0].description}</p>
+                <h1>{local[0]?.name}</h1>
+                <p>{local[0]?.description}</p>
               </div>
 
               <div id="opening">
@@ -76,7 +76,7 @@ function LocalDetail({ local }: ILocalDetail) {
                   <h2>Atendimento</h2>
                 </div>
 
-                <div id="times">
+                {/*                 <div id="times">
                   {days.map((day) => (
                     <div key={day.day} className="times-card">
                       <span>{weekDay(day.day)}</span>
@@ -87,7 +87,7 @@ function LocalDetail({ local }: ILocalDetail) {
                       </strong>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 <div id="contact">
                   <Button model="green" icon={<WhatsApp />}>
@@ -96,7 +96,7 @@ function LocalDetail({ local }: ILocalDetail) {
 
                   <div id="phone">
                     <span>Telefone</span>
-                    <strong>{local[0].phone}</strong>
+                    <strong>{local[0]?.phone}</strong>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ function LocalDetail({ local }: ILocalDetail) {
                 </div>
 
                 <div id="address-local">
-                  <span>{local[0].address}</span>
+                  <span>{local[0]?.address}</span>
                 </div>
               </div>
             </div>
@@ -115,7 +115,9 @@ function LocalDetail({ local }: ILocalDetail) {
         </main>
 
         <div id="picture">
-          <Image src={local[0].picture} layout="fill" objectFit="cover" />
+          {local[0] !== undefined && (
+            <Image src={local[0]?.picture} layout="fill" objectFit="cover" />
+          )}
         </div>
       </Container>
     </div>

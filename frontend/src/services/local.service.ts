@@ -34,3 +34,8 @@ export const getLocalsByCity = async (
   const { data } = await api.get(`/local?city=${city}`);
   return data;
 };
+
+export const getLocalBySlug = async (slug: string): Promise<ILocalParams[]> => {
+  const { data } = await api.get(`/local?slug=${slug}`);
+  return data;
+};

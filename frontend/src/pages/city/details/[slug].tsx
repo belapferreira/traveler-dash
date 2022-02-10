@@ -188,50 +188,36 @@ function CityDetail({ city, locals }: ICityDetail) {
 
                   <div id="top-right">
                     <Icon />
-                    <span>
-                      {localHighlighted[0] === undefined
-                        ? ''
-                        : localHighlighted[0].category}
-                    </span>
+                    {localHighlighted !== undefined && (
+                      <span>{localHighlighted[0].category}</span>
+                    )}
                   </div>
                 </div>
 
-                <h2>
-                  {localHighlighted[0] === undefined
-                    ? ''
-                    : localHighlighted[0].name}
-                </h2>
-                <span>
-                  {localHighlighted[0] === undefined
-                    ? ''
-                    : localHighlighted[0].description}
-                </span>
+                {localHighlighted !== undefined && (
+                  <>
+                    <h2>{localHighlighted[0].name}</h2>
+                    <span>{localHighlighted[0].description}</span>
+                  </>
+                )}
               </div>
 
               <div id="image">
-                <Image
-                  src={
-                    localHighlighted[0] === undefined
-                      ? '/images/traveler-login.png'
-                      : localHighlighted[0].picture
-                  }
-                  layout="fill"
-                  objectFit="cover"
-                />
+                {localHighlighted !== undefined && (
+                  <Image
+                    src={localHighlighted[0].picture}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                )}
 
                 <div id="buttons">
-                  <ManageButtons
-                    hrefEdit={`/city/local/edit/${
-                      localHighlighted[0] === undefined
-                        ? ''
-                        : localHighlighted[0].slug
-                    }`}
-                    hrefDelete={`/city/local/delete/${
-                      localHighlighted[0] === undefined
-                        ? ''
-                        : localHighlighted[0].slug
-                    }`}
-                  />
+                  {localHighlighted !== undefined && (
+                    <ManageButtons
+                      hrefEdit={`/city/local/edit/${localHighlighted[0].slug}`}
+                      hrefDelete={`/city/local/delete/${localHighlighted[0].slug}`}
+                    />
+                  )}
                 </div>
               </div>
             </div>

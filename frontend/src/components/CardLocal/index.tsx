@@ -32,7 +32,7 @@ function CardLocal({
       <a href={href}>
         <div id="rate">
           <StarRounded />
-          <span>{rate}</span>
+          <span>{rate === 0 ? '-' : rate}</span>
         </div>
         <div id="manage">
           <Image src={picture} layout="fill" objectFit="cover" />
