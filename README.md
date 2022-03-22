@@ -33,12 +33,20 @@
 
 ### Features
 
-- Página de login - **Iniciado** | _Incluir validações e autenticação_;
-- Página de listagem e exibição de cidades - **Feita**;
-- Página de detalhes da cidade selecionada - **Feita**;
-- Página de detalhes do local selecionado - **Iniciado**;
+#### Done
+
+- Página de listagem e exibição de cidades - **Feito**;
+- Página de detalhes da cidade selecionada - **Feito**;
 - Criação de nova cidade - **Feito parcialmente** | _Ajustar validação de imagens, checkbox, mapa e campos condicionais_;
+
+#### In progress
+
+- Página de login - **Iniciado** | _Incluir validações e autenticação_;
+- Página de detalhes do local selecionado - **Iniciado**;
 - Criação de novo local - **Iniciado**;
+
+#### Not started
+
 - Edição de cidade - **Não iniciado**;
 - Edição de local - **Não iniciado**;
 - Exclusão de cidade - **Não iniciado**;
